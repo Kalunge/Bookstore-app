@@ -1,4 +1,5 @@
 # Bookstore App
+An app built using react and redux for adding, reading and deleting books and categories
 
 This project was built using:
   - React
