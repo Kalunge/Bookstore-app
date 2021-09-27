@@ -9,7 +9,12 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact>
-          <Books />
+          <Books
+            books={[
+              { title: 'mybook', id: 1 },
+              { title: 'yourbook', id: 2 },
+            ]}
+          />
         </Route>
         <Route path="/categories">
           <Categories />
