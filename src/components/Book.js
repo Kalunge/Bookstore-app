@@ -25,10 +25,6 @@ const Book = ({ book }) => {
   );
 };
 
-// Book.defaultProps = {
-//   book: {},
-// };
-
 Book.propTypes = {
   book: PropTypes.shape({
     id: PropTypes.string.isRequired,
@@ -36,7 +32,5 @@ Book.propTypes = {
     author: PropTypes.string.isRequired,
   }).isRequired,
 };
-
-// /* eslint-disable react/forbid-prop-types */
 
 export default Book;
