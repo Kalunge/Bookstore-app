@@ -11,9 +11,9 @@ const AddBook = () => {
   const addBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuidv4(),
-      title: title || 'The river Between',
-      author: author || 'Ngugi',
+      item_id: uuidv4(),
+      title,
+      author,
     };
 
     dispatch(addBook(newBook));
