@@ -5,9 +5,8 @@ import AddBook from './AddBook';
 import Book from './Book';
 
 const Books = () => {
-  const books = useSelector((state) => state.booksReducer);
+  const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
@@ -16,7 +15,7 @@ const Books = () => {
     <>
       <ul>
         {books.map((book) => (
-          <Book key={book.id} book={book} />
+          <Book key={book.item_id} book={book} />
         ))}
       </ul>
       <AddBook />

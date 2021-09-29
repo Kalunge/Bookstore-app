@@ -7,7 +7,7 @@ import booksReducer from './books/books';
 const middleware = [logger, thunk];
 
 const reducer = combineReducers({
-  booksReducer,
+  books: booksReducer,
 });
 
 const store = createStore(reducer, applyMiddleware(...middleware));

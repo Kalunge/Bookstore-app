@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import axios from 'axios';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
@@ -10,25 +11,37 @@ export const removeBook = (payload) => async (dispatch) => {
   const { data } = await axios.delete(
     `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/6mNNN1uJAaAaYnbaqZwF/books/${payload}`,
   );
-  dispatch({ type: REMOVE_BOOK, payload: data });
+  if (data === 'The book was deleted successfully!') {
+    dispatch({ type: REMOVE_BOOK, payload });
+  }
 };
 
 export const addBook = (payload) => async (dispatch) => {
-  const body = JSON.stringify(payload);
   const { data } = await axios.post(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/6mNNN1uJAaAaYnbaqZwF/books',
-    body,
+    payload,
+    {
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+      },
+    },
   );
-  console.log(`id is ${data}`);
-  dispatch({ type: ADD_BOOK, payload: data });
+  if (data === 'Created') {
+    dispatch({ type: ADD_BOOK, payload });
+  }
 };
 
 export const getBooks = () => async (dispatch) => {
   const { data } = await axios.get(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/6mNNN1uJAaAaYnbaqZwF/books',
   );
-
-  dispatch({ type: GET_BOOKS, payload: data });
+  const formattedBooks = [];
+  for (const key in data) {
+    if (key) {
+      formattedBooks.push({ ...data[key][0], item_id: key });
+    }
+  }
+  dispatch({ type: GET_BOOKS, payload: formattedBooks });
 };
 
 const reducer = (state = initialState, action) => {
@@ -37,7 +50,9 @@ const reducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== payload);
+      return state.filter((book) => book.item_id !== payload);
+    case GET_BOOKS:
+      return payload;
     default:
       return state;
   }
