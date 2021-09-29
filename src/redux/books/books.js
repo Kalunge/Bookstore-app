@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-syntax */
 import axios from 'axios';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
@@ -36,11 +35,11 @@ export const getBooks = () => async (dispatch) => {
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/6mNNN1uJAaAaYnbaqZwF/books',
   );
   const formattedBooks = [];
-  for (const key in data) {
+  Object.keys(data).forEach((key) => {
     if (key) {
       formattedBooks.push({ ...data[key][0], item_id: key });
     }
-  }
+  });
   dispatch({ type: GET_BOOKS, payload: formattedBooks });
 };
 
