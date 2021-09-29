@@ -15,10 +15,10 @@ const Book = ({ book }) => {
       <h3>{book.title}</h3>
       {' '}
       <h5>
-        Author:
-        <strong style={{ color: 'blue' }}>{book.author}</strong>
+        category:
+        <strong style={{ color: 'blue' }}>{book.category}</strong>
       </h5>
-      <button onClick={() => removeBookFromStore(book.id)} type="button">
+      <button onClick={() => removeBookFromStore(book.item_id)} type="button">
         Remove
       </button>
     </div>
@@ -27,9 +27,9 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
