@@ -21,25 +21,28 @@ const AddBook = () => {
     setCategory('');
   };
   return (
-    <form onSubmit={addBookToStore}>
-      <span className="title Text-Style-10">ADD NEW BOOK</span>
-      <br />
-      <input
-        className="add-book"
-        placeholder="Add Title"
-        value={title}
-        required
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        className="add-book"
-        placeholder="Add category"
-        value={category}
-        required
-        onChange={(e) => setCategory(e.target.value)}
-      />
-      <button type="submit">Add Book</button>
-    </form>
+    <>
+      <form onSubmit={addBookToStore}>
+        <br />
+        <input
+          className="add-book"
+          placeholder="   Add Title"
+          value={title}
+          required
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className="add-book"
+          placeholder="     Add category"
+          value={category}
+          required
+          onChange={(e) => setCategory(e.target.value)}
+        />
+        <button className="btn" type="submit">
+          Add Book
+        </button>
+      </form>
+    </>
   );
 };
 
