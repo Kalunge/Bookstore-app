@@ -132,6 +132,10 @@ form {
   color: #4386bf;
 }
 
+.info {
+  margin-right: 3%;
+}
+
 .info button {
   padding: 1%;
   margin-top: 2%;
@@ -187,6 +191,8 @@ form {
 
 .book-panel {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 75rem;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;

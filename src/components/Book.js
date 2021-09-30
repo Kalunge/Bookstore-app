@@ -14,7 +14,7 @@ const Book = ({ book }) => {
     <div className="book-panel">
       <div className="info">
         <span className="category">{book.category}</span>
-        <h2 className="title my-t">{book.title}</h2>
+        <h2 className="title">{book.title}</h2>
         <span className="remove">
           <button
             onClick={() => removeBookFromStore(book.item_id)}
@@ -27,10 +27,9 @@ const Book = ({ book }) => {
       <div className="flex">
         <span className="">Current Chapter</span>
         <span className="current">Chapter 17</span>
-
-        <div className="update">
-          <span className="progress">Update progress</span>
-        </div>
+      </div>
+      <div className="update">
+        <span className="progress">Update progress</span>
       </div>
     </div>
   );
