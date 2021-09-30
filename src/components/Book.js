@@ -26,7 +26,7 @@ const Book = ({ book }) => {
       </div>
       <div className="flex">
         <span className="">Current Chapter</span>
-        <span className="current">Chapter 17</span>
+        <span className="current">  176 </span>
       </div>
       <div className="update">
         <span className="progress">Update progress</span>

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .books {
   width: 87.5rem;
   height: 68.563rem;
@@ -61,26 +62,11 @@ li {
   list-style: none;
 }
 
-.title {
-  width: 10.875rem;
-  height: 1.5rem;
-  margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.18px;
-  color: #888;
-}
-
 .add-book {
   width: 40rem;
   margin-left: 10%;
   height: 2.813rem;
   margin-top: 1.188rem;
-  /* padding: 0.813rem 35.688rem 0.813rem 1.063rem; */
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -90,12 +76,13 @@ form {
   display: flex;
   margin-right: 4%;
 }
+
 .category {
   width: 3.063rem;
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: "Montserrat", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -104,11 +91,12 @@ form {
   letter-spacing: normal;
   color: var(--black-two);
 }
+
 .title {
   width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
-  font-family: RobotoSlab;
+  font-family: "RobotoSlab", sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -121,8 +109,7 @@ form {
 .remove {
   width: 3.375rem;
   height: 1.188rem;
-  /* margin: 2.5% 0.938rem 0.125rem 0; */
-  font-family: RobotoSlab;
+  font-family: "RobotoSlab", sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -150,14 +137,14 @@ form {
   -webkit-filter: blur(50px);
   filter: blur(50px);
   background-color: var(--black);
-  color: #000; 
+  color: #000;
 }
 
 .current {
   width: 4.688rem;
   margin-top: 1rem;
   height: 1.313rem;
-  font-family: RobotoSlab;
+  font-family: "RobotoSlab", sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -166,18 +153,19 @@ form {
   letter-spacing: -0.4px;
   color: var(--black-two);
 }
+
 .progress {
-    width: 8.938rem;
-    height: 1.125rem;
-    font-family: RobotoSlab;
-    font-size: 0.813rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #fff;
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: "RobotoSlab", sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
 
 .update {
@@ -197,7 +185,6 @@ form {
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
-  border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
 }
@@ -207,15 +194,13 @@ form {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
 }
 
-.btn{
+.btn {
   width: 25%;
   height: 2.813rem;
   margin: 1.188rem 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
-  border-radius: 3px;
   background-color: #0290ff;
   border-radius: 5%;
 }
