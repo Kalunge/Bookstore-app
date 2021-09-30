@@ -14,7 +14,7 @@ const Book = ({ book }) => {
     <div className="book-panel">
       <div className="info">
         <span className="category">{book.category}</span>
-        <h2 className="title my">{book.title}</h2>
+        <h2 className="title my-t">{book.title}</h2>
         <span className="remove">
           <button
             onClick={() => removeBookFromStore(book.item_id)}
