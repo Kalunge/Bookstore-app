@@ -11,16 +11,35 @@ const Book = ({ book }) => {
   };
 
   return (
-    <div>
-      <h3>{book.title}</h3>
-      {' '}
-      <h5>
-        category:
-        <strong style={{ color: 'blue' }}>{book.category}</strong>
-      </h5>
-      <button onClick={() => removeBookFromStore(book.item_id)} type="button">
-        Remove
-      </button>
+    <div className="book-panel">
+      <div className="info">
+        <span className="category">{book.category}</span>
+        <h2 className="title">{book.title}</h2>
+        <span className="remove">
+          <button
+            onClick={() => removeBookFromStore(book.item_id)}
+            type="button"
+          >
+            Remove
+          </button>
+        </span>
+        <span className="comments">coments</span>
+        <span className="edit">Edit</span>
+      </div>
+      <div className="flexy">
+        <div className="oval" />
+        <div>
+          <span className="percent">64%</span>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
+      <div className="flex">
+        <span className="">Current Chapter</span>
+        <span className="current"> 176 </span>
+        <div className="update">
+          <span className="progress">Update progress</span>
+        </div>
+      </div>
     </div>
   );
 };
