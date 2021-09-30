@@ -23,13 +23,22 @@ const Book = ({ book }) => {
             Remove
           </button>
         </span>
+        <span className="comments">coments</span>
+        <span className="edit">Edit</span>
+      </div>
+      <div className="flexy">
+        <div className="oval" />
+        <div>
+          <span className="percent">64%</span>
+          <p className="completed">Completed</p>
+        </div>
       </div>
       <div className="flex">
         <span className="">Current Chapter</span>
-        <span className="current">  176 </span>
-      </div>
-      <div className="update">
-        <span className="progress">Update progress</span>
+        <span className="current"> 176 </span>
+        <div className="update">
+          <span className="progress">Update progress</span>
+        </div>
       </div>
     </div>
   );

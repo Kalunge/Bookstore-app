@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiUser } from 'react-icons/fi';
 
 const Header = () => (
   <ul className="panel">
@@ -17,6 +18,9 @@ const Header = () => (
       <Link to="/categories" className="categories">
         Categories
       </Link>
+    </li>
+    <li>
+      <FiUser size={34} color="blue" />
     </li>
   </ul>
 );
