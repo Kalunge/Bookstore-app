@@ -28,6 +28,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
+  text-decoration: none;
 }
 
 .categories {
@@ -132,6 +133,7 @@ form {
   border: none;
   margin-top: 2%;
   color: #4386bf;
+  cursor: pointer;
 }
 
 .shadow {
@@ -172,6 +174,7 @@ form {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+  cursor: pointer;
 }
 
 .update {
@@ -275,6 +278,7 @@ form {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  cursor: pointer;
 }
 
 .edit {
@@ -289,6 +293,7 @@ form {
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  cursor: pointer;
 }
 
 .addbook {
