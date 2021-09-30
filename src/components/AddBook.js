@@ -22,6 +22,7 @@ const AddBook = () => {
   };
   return (
     <>
+      <p className="addbook">ADD NEW BOOK</p>
       <form onSubmit={addBookToStore}>
         <br />
         <input
